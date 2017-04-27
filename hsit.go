@@ -137,7 +137,7 @@ func (t *SimpleChaincode) add_data(stub shim.ChaincodeStubInterface, args []stri
 		return nil, errors.New("Failed to get data name")
 	}
 
-	if dataAsBytes != []byte("") {
+	if dataAsBytes != nil {
 		fmt.Println("This data arleady exists: " + id)
 		//all stop a data by this ID exists
 		return nil, errors.New("This data arleady exists")
