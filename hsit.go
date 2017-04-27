@@ -111,7 +111,7 @@ func (t *SimpleChaincode) read_data(stub shim.ChaincodeStubInterface, args []str
 // add_data:データを追加
 //=================================================================================================================================
 func (t *SimpleChaincode) add_data(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
-	var id, val, str string
+	var id, val string
 	var err error
 
 	if len(args) != 2 {
